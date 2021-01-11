@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 
+import './App.css';
+import backgroundImage from './assets/background.jpg';
+
 const App = () => {
   const [projects, setProjects] = useState(['Desenvolvimento de app', 'Front-end web']);
 
@@ -12,7 +15,9 @@ const App = () => {
 
   return (
     <>
-      <Header title='Homepage' />
+      <Header title='Projects' />
+
+      <img width={300} src={backgroundImage} />
 
       <ul>
         {projects.map((project, index) => (
